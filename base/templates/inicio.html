@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load bootstrap5 %}
+<html>
+    <head>
+        <title>Django Contato</title>
+
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <div class="col-lg-8 mx-auto p-3 py-md-5">
+        <header class="d-flex align-itens-center pb-3 mb-5 border-button">
+            <a href="{% url 'inicio' %}" class="d-flex align-itens-center text-dark text-decoration-none">
+            <span class="fs-4">Pet Online</span>
+            </a>
+        </header>
+        <main>
+            {% block principal %}
+                <h1>
+                    Reserve o banho do seu Pet!
+                </h1>
+
+                <a href="{% url 'contato' %}" class="d-flex align-itens-center text-dark text-decoration-none">
+                <span class="fs-4">Contato</span>
+
+                <a href="{% url 'reserva' %}" class="d-flex align-itens-center text-dark text-decoration-none">
+                    <span class="fs-4">Reserva</span>
+            {% endblock principal %}
+            
+        </main>
+
+        <footer class="pt-5 my-5 text-muted border-top">
+            Curso Python - Última School
+        </footer>
+        </div>
+        <script src="/static/js/bootstrap.min.js"></script>
+    </body>
+</html
